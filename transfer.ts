@@ -1,3 +1,8 @@
+import { contracts, chainAdaptersm, utils } from "chainsig.js";
+import { Connection as SolanaConnection } from "@solana/web3.js";
+import { requestSignature } from "@neardefi/shade-agent-js";
+const { uint8ArrayToHex } = utils.cryptography;
+
 // Set up a chain signature contract instance
 const MPC_CONTRACT = new contracts.ChainSignatureContract({
   networkId: `testnet`,
